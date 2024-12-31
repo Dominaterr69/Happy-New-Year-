@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive New Year 2025 Gift</title>
+    <title>New Year 2025</title>
     <style>
         body {
             display: flex;
@@ -65,7 +65,7 @@
             font-size: 20px;
             color: #fff;
         }
-        .gift-content, .card {
+        .gift-content, .card, .credit {
             display: none;
             margin-top: 20px;
         }
@@ -82,6 +82,10 @@
             background: linear-gradient(to right, #ff5e62, #ff9966);
             color: white;
             animation: fadeIn 1s ease-in-out;
+        }
+        .credit {
+            font-size: 16px;
+            color: #fff;
         }
         .open .lid {
             transform: rotateX(180deg);
@@ -113,6 +117,7 @@
     <div class="text" id="giftText">Click to Open Your Gift</div>
     <div class="gift-content" id="giftContent">🎁</div>
     <div class="card" id="giftCard">Happy New Year 2025!!!</div>
+    <div class="credit" id="credit">Credit to Samar Kushwaha</div>
 </div>
 
 <audio id="giftSound" preload="auto">
@@ -124,6 +129,7 @@
     const giftText = document.getElementById('giftText');
     const giftContent = document.getElementById('giftContent');
     const giftCard = document.getElementById('giftCard');
+    const credit = document.getElementById('credit');
     const giftSound = document.getElementById('giftSound');
 
     const giftMessages = [
@@ -148,6 +154,7 @@
         giftContent.textContent = giftMessages[Math.floor(Math.random() * giftMessages.length)];
         giftContent.style.display = 'block';
         giftCard.style.display = 'block';
+        credit.style.display = 'block';
         createConfetti();
     });
 
